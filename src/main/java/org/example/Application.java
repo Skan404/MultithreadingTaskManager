@@ -12,7 +12,6 @@ public class Application {
         ResultStore resultStore = new ResultStore();
         List<Thread> threads = new ArrayList<>();
 
-        // Pobieranie liczby wątków z argumentów lub ustawienie domyślnej wartości
         int numberOfThreads = args.length > 0 ? Integer.parseInt(args[0]) : 2;
 
         // Uruchomienie wątków
@@ -23,7 +22,6 @@ public class Application {
 
 
         int taskId = 1;
-        // Klasa Application - fragment odpowiedzialny za wczytywanie danych wejściowych
         Scanner scanner = new Scanner(System.in);
         System.out.println("Wprowadź liczbę iteracji dla metody Leibnitza (lub wpisz 'quit' aby zakończyć):");
 
@@ -42,7 +40,7 @@ public class Application {
                 }
             } else {
                 try {
-                    Thread.sleep(100); // Krótkie uśpienie, aby zmniejszyć zużycie CPU
+                    Thread.sleep(100); // uśpienie
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }
